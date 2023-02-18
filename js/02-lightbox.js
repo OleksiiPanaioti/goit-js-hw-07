@@ -26,7 +26,13 @@ function createImagesCardsMarkup(galleryItems) {
 
 }
 
-
+   const lightbox = new SimpleLightbox(`.gallery a`, {
+        loop: true,
+        captionsData: `alt`,
+        captionPosition: 'bottom',
+        captionDelay: 250,
+        showCounter: false,
+    });
 
  
 function onGalleryPictureClick(e) {
@@ -38,13 +44,7 @@ function onGalleryPictureClick(e) {
         return;
     };
 
-    const lightbox = new SimpleLightbox(`.gallery a`, {
-        loop: true,
-        captionsData: `alt`,
-        captionPosition: 'bottom',
-        captionDelay: 250,
-        showCounter: false,
-    });
+ 
 
     console.log(e.target.alt);
 
